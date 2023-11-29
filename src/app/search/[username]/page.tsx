@@ -1,5 +1,8 @@
 import { iProps } from '@/interfaces/iProps'
 import { SearchBar } from './components'
+import { getUserByUsername } from '@/services/users'
+import { Profile } from './components/Profile'
+import { iUser } from '@/interfaces/iUser'
 
 export const generateMetadata = ({ params }: iProps) => {
   const { username } = params
@@ -10,13 +13,20 @@ export const generateMetadata = ({ params }: iProps) => {
   })
 }
 
-const Search = ({ params }: iProps) => {
+const Search = async ({ params }: iProps) => {
   const { username } = params
+
+  const { data }: any = await getUserByUsername(username)
+
+  const user: iUser = data
 
   return (
     <main>
       <div className="container">
         <SearchBar username={username} />
+        <div className="col-3">
+          <Profile user={user} />
+        </div>
       </div>
     </main>
   )
