@@ -14,22 +14,4 @@ export const Form = Styled.div`
     width: auto;
     margin-bottom: 30px;
   }
-
-  input {
-    width: 550px;
-    max-width: 100%;
-    height: 50px;
-    padding: 0 20px;
-    border-radius: 30px;
-    outline: none;
-    border: 1px solid ${theme.secondaryColor};
-  }
-
-  svg {
-    position: absolute;
-    right: 20px;
-    top: 50%;
-    transform: translate(0px, -50%);
-    cursor: pointer;
-  }
 `

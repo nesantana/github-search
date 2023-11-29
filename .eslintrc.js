@@ -33,5 +33,7 @@ module.exports = {
     camelcase: 'off',
     'react/react-in-jsx-scope': 'off',
     'import/no-extraneous-dependencies': 'off',
+    'react/no-unknown-property': 'off',
+    'no-unused-vars': 'off',
   },
 }
