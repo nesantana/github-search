@@ -38,7 +38,7 @@ const InputSearch = ({ term, setTerm }: iInputSearch) => {
   const router = useRouter()
   const { showError } = useToast()
 
-  const pageToGo = useMemo(() => `/search/${term}/`, [term])
+  const pageToGo = useMemo(() => `/${term}/`, [term])
 
   const goToPage = () => {
     if (isEmpty(term)) {

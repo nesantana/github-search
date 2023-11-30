@@ -35,5 +35,6 @@ module.exports = {
     'import/no-extraneous-dependencies': 'off',
     'react/no-unknown-property': 'off',
     'no-unused-vars': 'off',
+    'jsx-a11y/control-has-associated-label': 'off',
   },
 }

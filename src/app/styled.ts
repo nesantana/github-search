@@ -1,7 +1,6 @@
-import Styled from 'styled-components'
-import theme from '@/theme'
+import styled from 'styled-components'
 
-export const Form = Styled.div`
+export const Form = styled.div`
   margin: auto;
   display: flex;
   height: 100vh;
@@ -14,4 +13,15 @@ export const Form = Styled.div`
     width: auto;
     margin-bottom: 30px;
   }
+`
+export const Title = styled.h1`
+  font-size: 24px;
+`
+
+export const SubTitle = styled.h2`
+  font-size: 20px;
+`
+
+export const Text = styled.p`
+  font-size: 16px;
 `

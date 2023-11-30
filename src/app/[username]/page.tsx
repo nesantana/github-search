@@ -1,8 +1,9 @@
 import { iProps } from '@/interfaces/iProps'
 import { SearchBar } from './components'
 import { getUserByUsername } from '@/services/users'
-import { Profile } from './components/Profile'
+import { Profile } from './components/profile'
 import { iUser } from '@/interfaces/iUser'
+import { ListRepos } from './components/listRepos'
 
 export const generateMetadata = ({ params }: iProps) => {
   const { username } = params
@@ -24,8 +25,13 @@ const Search = async ({ params }: iProps) => {
     <main>
       <div className="container">
         <SearchBar username={username} />
-        <div className="col-3">
-          <Profile user={user} />
+        <div className="row">
+          <div className="col-3">
+            <Profile user={user} />
+          </div>
+          <div className="col-9">
+            <ListRepos username={username} />
+          </div>
         </div>
       </div>
     </main>

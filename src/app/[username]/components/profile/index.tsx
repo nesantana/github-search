@@ -1,20 +1,8 @@
 'use client'
 
-import styled from 'styled-components'
 import { FaUserFriends } from 'react-icons/fa'
 import { iUser } from '@/interfaces/iUser'
-
-const Title = styled.h1`
-  font-size: 24px;
-`
-
-const SubTitle = styled.h2`
-  font-size: 20px;
-`
-
-const Text = styled.p`
-  font-size: 16px;
-`
+import { SubTitle, Text, Title } from '@/app/styled'
 
 interface iProfile {
   user: iUser
