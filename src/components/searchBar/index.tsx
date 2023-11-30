@@ -12,7 +12,7 @@ export const SearchBar = ({ username }: iSearchBar) => {
   const [term, setTerm] = useState<string>(username ?? '')
 
   return (
-    <div className="d-flex align-items-center justify-content-center my-3 gap-3">
+    <div className="d-flex flex-column flex-lg-row align-items-center justify-content-center my-3 gap-3">
       <Link href="/">
         <img src="/assets/logo.png" alt="Logo Github Search" />
       </Link>

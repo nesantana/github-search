@@ -25,11 +25,11 @@ const Search = async ({ params }: iProps) => {
     <main>
       <div className="container">
         <SearchBar username={username} />
-        <div className="row">
-          <div className="col-3">
+        <div className="d-flex flex-column flex-lg-row gap-5">
+          <div className="col-lg-3">
             <Profile user={user} />
           </div>
-          <div className="col-9">
+          <div className="col-lg-9">
             <ListRepos username={username} />
           </div>
         </div>

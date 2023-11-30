@@ -16,12 +16,13 @@ interface iInputSearch {
 
 const InputStyled = styled.div`
   position: relative;
+  max-width: 100%;
 
   input {
     width: 550px;
     max-width: 100%;
     height: 50px;
-    padding: 0 20px;
+    padding: 0 50px 0 20px;
     border-radius: 30px;
     outline: none;
     border: 1px solid ${theme.secondaryColor};
@@ -37,7 +38,6 @@ const InputStyled = styled.div`
 `
 
 const InputSearch = ({ term, setTerm }: iInputSearch) => {
-  const a = 'a'
   const router = useRouter()
   const { showError } = useToast()
 

@@ -1,36 +1,58 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Github Search
 
-## Getting Started
+Este é um projeto para facilitar a busca de usuários no Github, aqui você consegui listar as informações de um usuário pelo seu Username, e também ver seus projetos públicos na plataforma.
 
-First, run the development server:
+## 🚀 Começando
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+Essas instruções permitirão que você obtenha uma cópia do projeto em operação na sua máquina local para fins de desenvolvimento e teste.
+
+Consulte **[Implantação](#-implanta%C3%A7%C3%A3o)** para saber como implantar o projeto.
+
+### 📋 Pré-requisitos
+
+De que coisas você precisa para instalar o software e como instalá-lo?
+
+```
+Tenha o Node baixado em seu computador!
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+### 🔧 Instalação
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+Faça o clone do projeto, executando o seguinte comando
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+```
+Git clone https://github.com/nesantana/github-search.git
+```
 
-## Learn More
+Após isso, será importante instalar todas as dependências:
 
-To learn more about Next.js, take a look at the following resources:
+```
+npm install
+```
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+Após isso, o projeto estará instalado, agora precisamos apenas rodar o mesmo:
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+```
+npm run dev
+```
 
-## Deploy on Vercel
+E pronto, projeto rodando na sua máquina na porta :3000, basta acessa-lo pelo navegador!
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+```
+localhost:3000
+```
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+## 🛠️ Construído com
+
+
+* [NextJS](https://nextjs.org/) - O principal framework atualmente.
+* [StyledComponents](https://styled-components.com/) - O mais poderoso CSS-in-JS da atualidade.
+* [API GitHub](https://developer.github.com/v3/) - A Api do Github para consumo de dados
+
+## ✒️ Autores
+
+* **Mateus Santana** - *Criei todo o projeto* - [nesantana](https://github.com/nesantana)
+
+## 📄 Licença
+
+Este projeto está sob a licença free

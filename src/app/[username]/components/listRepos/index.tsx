@@ -92,7 +92,7 @@ export const ListRepos = ({ username }: iListRepos) => {
 
   return (
     <CardListRepos>
-      <div className="d-flex justify-content-between">
+      <div className="d-flex justify-content-between align-items-center flex-column flex-lg-row">
         <div>
           Filtrando por Maior Estrelas
         </div>
@@ -116,7 +116,7 @@ export const ListRepos = ({ username }: iListRepos) => {
         const url = `/${repo.full_name}`
         return (
           <div className="py-3 border-bottom" key={repo.id}>
-            <div className="d-flex justify-space-between align-items-center">
+            <div className="d-flex justify-space-between text-center text-lg-start align-items-center flex-column flex-lg-row">
               <div className="col-9">
                 <div>
                   <Link href={url} className="hover:text-decoration-underline">
@@ -134,7 +134,7 @@ export const ListRepos = ({ username }: iListRepos) => {
                 {repo.stargazers_count}
               </div>
             </div>
-            <div className="d-flex gap-1 align-items-center mt-2">
+            <div className="d-flex gap-1 align-items-center mt-2 justify-content-lg-start justify-content-center">
               <a href={repo.html_url} target="_blank" className="btn btn-dark btn-sm" rel="noreferrer">
                 <FaExternalLinkAlt />
                 {' '}

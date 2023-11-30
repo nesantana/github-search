@@ -17,9 +17,6 @@ export const generateMetadata = ({ params }: iProps) => {
 const Search = async ({ params }: iProps) => {
   const { username, project } = params
 
-  console.log(username)
-  console.log(project)
-
   const { data }: any = await getUserByUsername(username)
 
   const user: iUser = data
@@ -28,11 +25,11 @@ const Search = async ({ params }: iProps) => {
     <main>
       <div className="container">
         <SearchBar username={username} />
-        <div className="row">
-          <div className="col-3">
+        <div className="d-flex flex-column-reverse flex-lg-row gap-5">
+          <div className="col-lg-3">
             <Profile user={user} />
           </div>
-          <div className="col-9">
+          <div className="col-lg-9">
             <Description username={username} project={project} />
           </div>
         </div>
