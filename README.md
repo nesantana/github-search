@@ -13,7 +13,7 @@ Consulte **[Implantação](#-implanta%C3%A7%C3%A3o)** para saber como implantar 
 De que coisas você precisa para instalar o software e como instalá-lo?
 
 ```
-Tenha o Node baixado em seu computador!
+Tenha o Node baixado em seu computador pelo menos na versão 17 pra cima!
 ```
 
 ### 🔧 Instalação
@@ -21,7 +21,7 @@ Tenha o Node baixado em seu computador!
 Faça o clone do projeto, executando o seguinte comando
 
 ```
-Git clone https://github.com/nesantana/github-search.git
+git clone https://github.com/nesantana/github-search.git
 ```
 
 Após isso, será importante instalar todas as dependências:
