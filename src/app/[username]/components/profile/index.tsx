@@ -16,8 +16,9 @@ export const Profile = ({
     login = '',
     name = '',
     bio = '',
-    followers,
-    following,
+    followers = '',
+    following = '',
+    email = '',
   } = user
 
   return (
@@ -34,6 +35,10 @@ export const Profile = ({
       <SubTitle>
         {login}
       </SubTitle>
+
+      <Text className="mt-3">
+        {email}
+      </Text>
 
       <Text className="mt-3">
         {bio}

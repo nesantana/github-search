@@ -101,7 +101,7 @@ export const ListRepos = ({ username }: iListRepos) => {
           onChange={({ target }) => setCurrentOrder(target.value)}
         >
           {orders.map((order: iOrder) => (
-            <option value={order.id}>{order.name}</option>
+            <option value={order.id} key={order.id}>{order.name}</option>
           ))}
         </select>
       </div>
@@ -115,7 +115,7 @@ export const ListRepos = ({ username }: iListRepos) => {
       {(!!listRepos.length && !loading) && listRepos.map((repo: iRepo) => {
         const url = `/project/${repo.full_name}`
         return (
-          <div className="py-3 border-bottom">
+          <div className="py-3 border-bottom" key={repo.id}>
             <div className="d-flex justify-space-between align-items-center">
               <div className="col-9">
                 <div>
