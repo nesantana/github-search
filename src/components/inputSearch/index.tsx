@@ -7,6 +7,7 @@ import { FaSearch } from 'react-icons/fa'
 import styled from 'styled-components'
 import { useToast } from '@/hooks/useToast'
 import theme from '@/theme'
+import { getUserByUsername } from '@/services/users'
 
 interface iInputSearch {
   term: string
@@ -14,7 +15,9 @@ interface iInputSearch {
 }
 
 const InputStyled = styled.div`
-    input {
+  position: relative;
+
+  input {
     width: 550px;
     max-width: 100%;
     height: 50px;
@@ -40,14 +43,20 @@ const InputSearch = ({ term, setTerm }: iInputSearch) => {
 
   const pageToGo = useMemo(() => `/${term}/`, [term])
 
-  const goToPage = () => {
-    if (isEmpty(term)) {
-      showError('Por favor, preencha o nome de usuário!')
+  const goToPage = async () => {
+    try {
+      if (isEmpty(term)) {
+        showError('Por favor, preencha o nome de usuário!')
 
-      return
+        return
+      }
+
+      const { data }: any = await getUserByUsername(term)
+
+      router.push(pageToGo)
+    } catch (_) {
+      showError('Opss, usuário não encontrado. Pesquise por outro username.')
     }
-
-    router.push(pageToGo)
   }
 
   const handleSearch = (e: any) => {
@@ -57,7 +66,7 @@ const InputSearch = ({ term, setTerm }: iInputSearch) => {
   }
 
   return (
-    <InputStyled className="position-relative">
+    <InputStyled>
       <input
         type="text"
         placeholder="Pesquise o nome de usuário que deseja buscar..."

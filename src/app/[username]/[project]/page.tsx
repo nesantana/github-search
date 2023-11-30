@@ -1,21 +1,24 @@
 import { iProps } from '@/interfaces/iProps'
-import { SearchBar } from '../../components/searchBar'
+import { SearchBar } from '@/components/searchBar'
 import { getUserByUsername } from '@/services/users'
-import { Profile } from '../../components/profile'
+import { Profile } from '@/components/profile'
 import { iUser } from '@/interfaces/iUser'
-import { ListRepos } from './components/listRepos'
+import { Description } from './components'
 
 export const generateMetadata = ({ params }: iProps) => {
-  const { username } = params
+  const { username, project } = params
 
   return ({
-    title: `${username} - GitHub Search`,
+    title: `${username}/${project} - GitHub Search`,
     description: `Você buscou por ${username}`,
   })
 }
 
 const Search = async ({ params }: iProps) => {
-  const { username } = params
+  const { username, project } = params
+
+  console.log(username)
+  console.log(project)
 
   const { data }: any = await getUserByUsername(username)
 
@@ -30,7 +33,7 @@ const Search = async ({ params }: iProps) => {
             <Profile user={user} />
           </div>
           <div className="col-9">
-            <ListRepos username={username} />
+            <Description username={username} project={project} />
           </div>
         </div>
       </div>

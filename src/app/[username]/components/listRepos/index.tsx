@@ -113,7 +113,7 @@ export const ListRepos = ({ username }: iListRepos) => {
       )}
 
       {(!!listRepos.length && !loading) && listRepos.map((repo: iRepo) => {
-        const url = `/project/${repo.full_name}`
+        const url = `/${repo.full_name}`
         return (
           <div className="py-3 border-bottom" key={repo.id}>
             <div className="d-flex justify-space-between align-items-center">
