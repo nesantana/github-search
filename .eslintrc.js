@@ -36,5 +36,6 @@ module.exports = {
     'react/no-unknown-property': 'off',
     'no-unused-vars': 'off',
     'jsx-a11y/control-has-associated-label': 'off',
+    'react/require-default-props': 'off',
   },
 }

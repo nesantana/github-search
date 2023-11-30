@@ -8,6 +8,7 @@ import { useToast } from '@/hooks/useToast'
 import { getReposByUsername } from '@/services/users'
 import { iRepo } from '@/interfaces/iRepos'
 import { SubTitle } from '@/app/styled'
+import { Skeleton } from '@/components/skeleton'
 
 interface iListRepos {
   username: string
@@ -104,7 +105,14 @@ export const ListRepos = ({ username }: iListRepos) => {
           ))}
         </select>
       </div>
-      {!!listRepos.length && listRepos.map((repo: iRepo) => {
+
+      {loading && (
+        <div className="mt-3">
+          <Skeleton height={96} marginBottom={20} />
+        </div>
+      )}
+
+      {(!!listRepos.length && !loading) && listRepos.map((repo: iRepo) => {
         const url = `/project/${repo.full_name}`
         return (
           <div className="py-3 border-bottom">
