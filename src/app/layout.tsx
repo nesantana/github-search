@@ -17,6 +17,9 @@ export default function RootLayout({
 }) {
   return (
     <html lang="pt-br">
+      <head>
+        <link rel="shortcut icon" href="/favicon.png" type="image/x-icon" />
+      </head>
       <body>
         <StyledComponentsRegistry>
           {children}
