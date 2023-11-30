@@ -37,5 +37,6 @@ module.exports = {
     'no-unused-vars': 'off',
     'jsx-a11y/control-has-associated-label': 'off',
     'react/require-default-props': 'off',
+    'react/jsx-no-useless-fragment': 'off',
   },
 }
