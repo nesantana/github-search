@@ -21,7 +21,7 @@ export const Profile = ({
   } = user
 
   return (
-    <>
+    <div className="position-sticky top-0 py-3">
       <img
         className="rounded-circle"
         src={avatar_url}
@@ -57,6 +57,6 @@ export const Profile = ({
           Seguindo
         </div>
       </div>
-    </>
+    </div>
   )
 }
